@@ -30,6 +30,7 @@ class LoginController extends AbstractController
         ];
  
         // Retourne les données de l'utilisateur sous forme de réponse JSON
-        return new JsonResponse(json_encode($userData, JSON_THROW_ON_ERROR));
+        return $this->json($userData);
+        //return new JsonResponse(json_encode($userData, JSON_THROW_ON_ERROR));
     }
 }
